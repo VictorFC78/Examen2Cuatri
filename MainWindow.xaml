@@ -1,0 +1,24 @@
+﻿<Window x:Class="Examen2Cuatri.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Examen2Cuatri"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid ItemsSource="{Binding}"  AutoGenerateColumns="False" Margin="0,0,526,217">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="REFERENCIA" Binding="{Binding Path=Referencia}"/>
+                <DataGridTextColumn Header="PESO" Binding="{Binding Path=Peso}"/>
+                <DataGridTextColumn Header="VOLUMEN" Binding="{Binding Path=Volumen}"/>
+                <DataGridTextColumn Header="CONTENIDO" Binding="{Binding Path=TipoContenido}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="CONTENIDO" HorizontalAlignment="Left" Margin="289,10,0,0" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name="txt"  HorizontalAlignment="Left" Margin="377,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="validar"/>
+        <Button x:Name="btn" Content="FILTRAR" HorizontalAlignment="Left" Margin="289,197,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.57,1.707" Width="122" Click="btn_Click"/>
+        <Label Content="PESO MEDIO" HorizontalAlignment="Left" Margin="289,49,0,0" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name="pm"  HorizontalAlignment="Left" Margin="377,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+    </Grid>
+</Window>
